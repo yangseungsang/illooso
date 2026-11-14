@@ -1,6 +1,9 @@
-node_modules/
-.next/
-out/
-*.tsbuildinfo
-.env*
-.DS_Store
+.gradle/
+.gradle-user-home/
+**/build/
+local.properties
+.idea/
+*.iml
+*.jks
+*.keystore
+artifacts/*.apk

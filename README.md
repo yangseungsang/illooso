@@ -2,11 +2,11 @@
 
 **목적지 근처에서 운전자와 동승자가 만나기 좋은 장소를 찾는 차량용 앱 프로토타입**
 
-일로오소는 목적지 주변의 승하차·주차 후보를 지도에서 비교하고, 선택한 장소를 차량 내비게이션에 전달하는 경험을 탐색합니다. Pleos Connect용 Android 앱을 중심으로 개발했으며, 동승자 공유 흐름을 위한 웹 프로토타입도 함께 포함합니다.
+일로오소는 목적지 주변의 승하차·주차 후보를 지도에서 비교하고, 선택한 장소를 차량 내비게이션에 전달하는 경험을 탐색합니다. Pleos Connect용 Android 네이티브 앱으로 개발했습니다.
 
 > 현재 평거동 일대를 대상으로 한 프로토타입입니다. 지도와 목적지 위치에는 OpenStreetMap 데이터를 사용하지만, 승하차 후보와 정차 적합성·운영 정보·후기는 예시입니다. 실제 정차 가능 여부나 현장 안전을 보장하지 않습니다.
 
-![일로오소 지도 화면](pleos-app/verification/pleos-place-icons-2026-11-14.png)
+![일로오소 지도 화면](illooso/verification/pleos-place-icons-2026-11-14.png)
 
 ## 주요 기능
 
@@ -21,9 +21,8 @@
 
 | 경로 | 설명 | 기술 |
 | --- | --- | --- |
-| [`pleos-app/`](pleos-app/) | 주 실행 프로젝트. Pleos Connect용 네이티브 차량 앱 | Java 17, Android Views, Canvas, NaviHelper 3.0.5 |
-| [`illooso/`](illooso/) | 초기 웹 프로토타입 및 동승자 공유 화면 | Next.js, React, TypeScript |
-| [`pleos-app/verification/`](pleos-app/verification/) | 기능별 검증 기록과 화면 캡처 | Android 단위 테스트, Pleos AVD |
+| [`illooso/`](illooso/) | 주 실행 프로젝트. Pleos Connect용 네이티브 차량 앱 | Java 17, Android Views, Canvas, NaviHelper 3.0.5 |
+| [`illooso/verification/`](illooso/verification/) | 기능별 검증 기록과 화면 캡처 | Android 단위 테스트, Pleos AVD |
 
 ## 시작하기
 
@@ -36,12 +35,12 @@
 - Pleos Connect AVD 또는 호환되는 실행 환경
 - Google Maven, Maven Central 및 Pleos Maven 저장소 접근
 
-Android Studio에서 `pleos-app` 디렉터리를 열고 Gradle JDK를 17로 설정합니다. Android SDK 경로는 각 환경의 `pleos-app/local.properties`에 설정합니다. 해당 파일은 Git에 포함되지 않습니다.
+Android Studio에서 `illooso` 디렉터리를 열고 Gradle JDK를 17로 설정합니다. Android SDK 경로는 각 환경의 `illooso/local.properties`에 설정합니다. 해당 파일은 Git에 포함되지 않습니다.
 
 저장소 루트에서 빌드와 단위 테스트를 실행합니다.
 
 ```bash
-cd pleos-app
+cd illooso
 ./gradlew :app:assembleDebug :app:testDebugUnitTest
 ```
 
@@ -52,27 +51,7 @@ adb devices
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-내비게이션 목적지 조회와 경로 설정에는 Pleos 환경과 해당 권한이 필요합니다. 설치 및 권한에 관한 상세 내용은 [Android 앱 문서](pleos-app/README.md), SDK 연결과 응답 처리 방식은 [Pleos 브리지 문서](pleos-app/docs/PLEOS-BRIDGE.md)를 참고하세요.
-
-### 웹 프로토타입
-
-Node.js와 npm을 설치한 후 저장소 루트에서 실행합니다. 별도의 API 키나 서버 설정은 필요하지 않습니다.
-
-```bash
-cd illooso
-npm install
-npm run dev
-```
-
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 엽니다. 정적 빌드, 도메인 테스트 및 타입 검사는 다음 명령으로 실행합니다.
-
-```bash
-npm run build
-npm test
-npm run typecheck
-```
-
-정적 빌드 결과는 `illooso/out/`에 생성됩니다. 웹의 지도와 내비게이션은 시뮬레이션이며, 네이티브 앱과 데이터가 동기화되지 않습니다. 자세한 내용은 [웹 문서](illooso/README.md)를 참고하세요.
+내비게이션 목적지 조회와 경로 설정에는 Pleos 환경과 해당 권한이 필요합니다. 설치 및 권한에 관한 상세 내용은 [Android 앱 문서](illooso/README.md), SDK 연결과 응답 처리 방식은 [Pleos 브리지 문서](illooso/docs/PLEOS-BRIDGE.md)를 참고하세요.
 
 ## 데이터와 구현 범위
 
@@ -83,13 +62,12 @@ npm run typecheck
 
 ## 테스트와 검증
 
-Android 단위 테스트는 장소·추천 조건·목적지·후기·지도 좌표 및 라벨 배치를 다룹니다. 웹 테스트는 추천 조건과 공유 데이터 등 도메인 로직을 검증합니다. Pleos AVD에서의 기능별 확인 결과와 미검증 항목은 [검증 기록](pleos-app/verification/)에 남겨두었습니다.
+Android 단위 테스트는 장소·추천 조건·목적지·후기·지도 좌표 및 라벨 배치를 다룹니다. Pleos AVD에서의 기능별 확인 결과와 미검증 항목은 [검증 기록](illooso/verification/)에 남겨두었습니다.
 
 ## 문서
 
-- [Android 앱 개발 및 실행 안내](pleos-app/README.md)
-- [Pleos SDK 연동 상세](pleos-app/docs/PLEOS-BRIDGE.md)
-- [웹 프로토타입 안내](illooso/README.md)
+- [Android 앱 개발 및 실행 안내](illooso/README.md)
+- [Pleos SDK 연동 상세](illooso/docs/PLEOS-BRIDGE.md)
 - [프로젝트 기획서 (Notion)](https://app.notion.com/p/41388b2f14b180818a8ec3bc0078d4f0)
 
 ## 라이선스

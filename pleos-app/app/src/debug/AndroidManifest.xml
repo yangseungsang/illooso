@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Developer diagnostic only; excluded from release builds. -->
+    <instrumentation
+        android:name="ai.illooso.app.ConnectionProbeInstrumentation"
+        android:targetPackage="ai.illooso.app"
+        android:handleProfiling="false"
+        android:functionalTest="true"
+        android:label="ILLOOSO native connection probe" />
+</manifest>

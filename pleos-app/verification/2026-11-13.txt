@@ -1,0 +1,25 @@
+ILLOOSO validation — 2026-11-13, Asia/Seoul
+
+Native build: ./gradlew :app:assembleDebug :app:testDebugUnitTest — passed.
+Native recommendation tests: 10 passed.
+Web typecheck/build: passed. Web domain tests: 13 passed.
+Web browser checks: waiting filters, empty search, bookmark reload persistence,
+  share URL + passenger page, simulated route -> arrival -> report, report withdrawal.
+Passenger responsive check: 390x844; documentWidth=390 (no horizontal overflow).
+
+Pleos runtime: emulator-5586, Pleos release_connect_v2.1.0, Android14.
+Read-only direct framework instrumentation result:
+  status=PASS
+  connected=true
+  policyKnown=true
+  drivingRestricted=false
+  destinationResponded=true
+  destinationAvailable=false (no active native destination)
+  route=idle
+  elapsedMs=1993
+No route or UI state was altered by this connectivity probe.
+
+Earlier AndroidX instrumentation attempts did not pass: startup timeout/ANR.
+The lightweight probe above verifies connectivity and policy only, not full UI E2E.
+Native visual interaction QA and native route completion are not verified.
+Road coordinates/permissions/map layout/travel estimates remain synthetic fixtures.

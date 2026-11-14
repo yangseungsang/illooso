@@ -1,0 +1,24 @@
+<resources>
+    <style name="Theme.Illooso" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColorPrimary">#172334</item>
+        <item name="android:textColorSecondary">#596777</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#F5F7FB</item>
+        <item name="android:navigationBarColor">#F5F7FB</item>
+        <item name="android:colorAccent">#2563EB</item>
+        <item name="android:alertDialogTheme">@style/Theme.Illooso.Dialog</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">#F5F7FB</item>
+    </style>
+    <style name="Theme.Illooso.Dialog" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColorPrimary">#172334</item>
+        <item name="android:textColorSecondary">#596777</item>
+        <item name="android:colorAccent">#2563EB</item>
+        <item name="android:windowMinWidthMajor">88%</item>
+        <item name="android:windowMinWidthMinor">88%</item>
+    </style>
+</resources>

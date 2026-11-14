@@ -1,0 +1,1 @@
+aa2c5920189649e60e5a860c99492f9ca331f9ac9ec36dda53fb35fb21e8cb17  artifacts/illooso-pleos-debug.apk

@@ -1,0 +1,17 @@
+--------- beginning of main
+11-14 00:38:20.661 26649 26649 I IlloosoPleos: UX connecting Car service; context=ai.illooso.app.MainActivity
+11-14 00:38:20.690 26649 26649 I IlloosoPleos: UX createCar returned present=true
+11-14 00:38:20.804 26649 26649 I IlloosoPleos: connected=false policyKnown=false restricted=true destination=false nativeDestination=false targetMatched=false nativeGuidance=false route=idle
+11-14 00:38:20.828 26649 26649 I IlloosoPleos: UX Car lifecycle ready=true servicePresent=true
+11-14 00:38:20.833 26649 26649 I IlloosoPleos: UX manager present=true
+11-14 00:38:20.835 26649 26649 I IlloosoPleos: UX known: requiresOptimization=false flags=0
+11-14 00:38:20.835 26649 26649 I IlloosoPleos: connected=false policyKnown=true restricted=false destination=false nativeDestination=false targetMatched=false nativeGuidance=false route=idle
+11-14 00:38:21.373 26649 26649 I IlloosoPleos: connected=true policyKnown=true restricted=false destination=false nativeDestination=false targetMatched=false nativeGuidance=false route=idle
+11-14 00:38:22.408 26649 26649 I IlloosoPleos: connected=true policyKnown=true restricted=false destination=true nativeDestination=true targetMatched=false nativeGuidance=false route=idle
+11-14 00:38:38.296 26649 26649 I IlloosoPleos: connected=true policyKnown=true restricted=false destination=true nativeDestination=true targetMatched=false nativeGuidance=false route=requesting
+11-14 00:38:38.830 26649 26649 I IlloosoPleos: Native cancellation during pending replacement; retaining new target
+11-14 00:38:38.830 26649 26649 I IlloosoPleos: connected=true policyKnown=true restricted=false destination=false nativeDestination=false targetMatched=false nativeGuidance=false route=requesting
+11-14 00:38:49.431 26649 26649 I IlloosoPleos: connected=true policyKnown=true restricted=false destination=true nativeDestination=true targetMatched=true nativeGuidance=false route=requesting
+11-14 00:38:49.505 26649 26649 I IlloosoPleos: Native route state after target: mode=ROUTE_GUIDING isRouting=false
+11-14 00:38:49.505 26649 26649 I IlloosoPleos: connected=true policyKnown=true restricted=false destination=true nativeDestination=true targetMatched=true nativeGuidance=true route=active
+11-14 00:38:49.579 26649 26649 I IlloosoPleos: Navigation screen request submitted; visibility is not acknowledged by SDK
